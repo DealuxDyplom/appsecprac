@@ -1,0 +1,8 @@
+rules:
+  - id: cors-misconfiguration
+    patterns:
+      - pattern: |
+          "Access-Control-Allow-Origin": $ORIGIN
+    message: "Potential CORS Misconfiguration vulnerability"
+    languages: [javascript]
+    severity: WARNING

@@ -1,0 +1,10 @@
+rules:
+  - id: broken-access-control
+    patterns:
+      - pattern: |
+          if $ROLE == "admin" {
+              ...
+          }
+    message: "Potential Broken Access Control vulnerability"
+    languages: [go]
+    severity: ERROR

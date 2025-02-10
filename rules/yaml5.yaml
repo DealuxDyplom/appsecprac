@@ -1,0 +1,8 @@
+rules:
+  - id: buffer-overflow
+    patterns:
+      - pattern: |
+          gets($BUFFER)
+    message: "Potential Buffer Overflow vulnerability"
+    languages: [c]
+    severity: ERROR

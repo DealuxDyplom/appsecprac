@@ -1,0 +1,8 @@
+rules:
+  - id: ssti-vulnerability
+    patterns:
+      - pattern: |
+          render_template_string($TEMPLATE, ...)
+    message: "Potential SSTI vulnerability"
+    languages: [python]
+    severity: ERROR

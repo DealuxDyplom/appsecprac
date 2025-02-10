@@ -1,0 +1,8 @@
+rules:
+  - id: command-injection
+    patterns:
+      - pattern: |
+          open($PATH + $FILENAME, ...)
+    message: "Potential Command Injection vulnerability"
+    languages: [python]
+    severity: ERROR

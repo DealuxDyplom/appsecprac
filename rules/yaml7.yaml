@@ -1,0 +1,8 @@
+rules:
+  - id: lfi-vulnerability
+    patterns:
+      - pattern: |
+          file_get_contents($FILENAME)
+    message: "Potential Local File Inclusion vulnerability"
+    languages: [php]
+    severity: ERROR
